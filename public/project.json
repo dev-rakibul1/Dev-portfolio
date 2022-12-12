@@ -1,0 +1,70 @@
+[
+  {
+    "img1": "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    "img2": "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    "img3": "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    "title": "Second hand car buy sell",
+    "author": "Creator: Rakibul Islam",
+    "rows": 2,
+    "cols": 2,
+    "featured": true,
+    "description": "This is a second-hand car sell shop store project. The website builds for the purpose that we sell and brought cars. The customer will get here a lot of opportunities to sell and purchase cars. There is have three types of categories product luxury, microbus, and electronic car. The luxury is very awesome and we selected luxurious cars one by one from the car store. We have each and every car that is very awesome in our hands. There are use technology Reactjs, Nodejs, Expressjs, MongoDB, and google firebase for login. The website is very interesting and every pixel is perfectly designed and fully responsive (Mobile, tablet, and desktop). There are your here TailWind CSS and daisyui tailwind plugins.There will be three types of administrators admin, seller, and buyer. The admin is max power and controls the full application. The seller controls her product and her customer. The buyer just handles her products.",
+
+    "moreDet": [
+      "Application builds around 30+ components and web server and database.",
+      "♦ Project roles are separate and distinct responsibilities. There are three types of rules (Admin, seller, buyer)",
+      "SPA (Build user interface, and backend, node, express, MongoDB, firebase). Responsive layout (Tailwind CSS (daisyui plugin))"
+    ]
+  },
+  {
+    "img1": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
+    "img2": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
+    "img3": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
+    "title": "Tourist",
+    "author": "Creator: Rakibul Islam",
+    "rows": 2,
+    "cols": 2,
+    "featured": true,
+    "description": "This is a tourist website. The website build for purpose for tour the most popular place in the world and the visitor that to be enjoy her life with us. There are use technology Reactjs, Nodejs, Expressjs, mongoDB, google firebase for login. The website very interesting and every pixel perfectly design and fully responsive for (Mobile, tablet, desktop). There are your here TailWind css and daisyui tailwind plugin.",
+
+    "moreDet": [
+      "Application builds around 20+ components and web server and database.",
+      "There are use technology React, Node, Express, MongoDB, Firebase and Tailwind CSS (daisyui plugin)",
+      "Every pixel's wonderful design and fully responsive layout for (mobile, tablet, desktop)."
+    ]
+  },
+  {
+    "img1": "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    "img2": "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    "img3": "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    "title": "Tourist",
+    "author": "Creator: Rakibul Islam",
+    "rows": 2,
+    "cols": 2,
+    "featured": true,
+    "description": "This is a tourist website. The website build for purpose for tour the most popular place in the world and the visitor that to be enjoy her life with us. There are use technology Reactjs, Nodejs, Expressjs, mongoDB, google firebase for login. The website very interesting and every pixel perfectly design and fully responsive for (Mobile, tablet, desktop). There are your here TailWind css and daisyui tailwind plugin.",
+
+    "moreDet": [
+      "Application builds around 20+ components and web server and database.",
+      "There are use technology React, Node, Express, MongoDB, Firebase and Tailwind CSS (daisyui plugin)",
+      "Every pixel's wonderful design and fully responsive layout for (mobile, tablet, desktop)."
+    ]
+  },
+  {
+    "img1": "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    "img2": "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    "img3": "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    "title": "Tourist",
+    "author": "Creator: Rakibul Islam",
+    "rows": 2,
+    "cols": 2,
+    "featured": true,
+    "description": "This is a tourist website. The website build for purpose for tour the most popular place in the world and the visitor that to be enjoy her life with us. There are use technology Reactjs, Nodejs, Expressjs, mongoDB, google firebase for login. The website very interesting and every pixel perfectly design and fully responsive for (Mobile, tablet, desktop). There are your here TailWind css and daisyui tailwind plugin.",
+
+    "moreDet": [
+      "Application builds around 20+ components and web server and database.",
+      "There are use technology React, Node, Express, MongoDB, Firebase and Tailwind CSS (daisyui plugin)",
+      "Every pixel's wonderful design and fully responsive layout for (mobile, tablet, desktop)."
+    ]
+  }
+]

@@ -20,7 +20,7 @@ const Navbar = () => {
       <NavLink className="navbarItems" to="/about">
         <Tab label="About" />
       </NavLink>
-      <NavLink className="navbarItems" to="/project">
+      <NavLink className="navbarItems" to="/projects">
         <Tab label="Project" />
       </NavLink>
       <NavLink className="navbarItems" to="/contact">
@@ -50,7 +50,7 @@ const Navbar = () => {
       >
         <Toolbar>
           {/* Navbar brand */}
-          <Link>
+          <Link to="/">
             <Typography sx={{ maxWidth: "80px" }}>
               <img
                 style={{ maxWidth: "220px" }}

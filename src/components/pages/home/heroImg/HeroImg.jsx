@@ -4,7 +4,7 @@ import React from "react";
 const HeroImg = () => {
   return (
     <Box>
-      <Typography
+      {/* <Typography
         variant="image"
         sx={{
           maxWidth: "200px",
@@ -21,7 +21,13 @@ const HeroImg = () => {
             right: "2%",
           }}
         />
-      </Typography>
+      </Typography> */}
+      <Box
+        sx={{
+          display: { xs: "none", sm: "none", md: "block" },
+        }}
+        className="hero-shape"
+      ></Box>
       <Typography variant="image" sx={{ zIndex: "20" }}>
         <img
           src="https://i.ibb.co/WxKGxP3/Rakibul.png"

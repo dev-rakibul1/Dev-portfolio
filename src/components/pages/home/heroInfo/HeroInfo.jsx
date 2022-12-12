@@ -1,7 +1,6 @@
-import { Facebook, GitHub, LinkedIn } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
+import Social from "../../shared/spinner/social/Social";
 import TypedAnimation from "../../typed/TypedAnimation";
 
 const HeroInfo = () => {
@@ -39,24 +38,7 @@ const HeroInfo = () => {
           Download CV
         </Button>
 
-        {/* Social icons */}
-        <Box sx={{ position: "absolute", bottom: 0, mb: 2 }}>
-          <Link to="https://github.com/dev-rakibul1" target="_blank">
-            <Typography sx={{ color: "#91C73E", p: 1 }} variant="span">
-              <GitHub />
-            </Typography>
-          </Link>
-          <Link to="https://www.linkedin.com/in/dev-rakibul/" target="_blank">
-            <Typography sx={{ color: "#91C73E", p: 1 }} variant="span">
-              <LinkedIn />
-            </Typography>
-          </Link>
-          <Link to="https://www.facebook.com/dev.rakibul1/" target="_blank">
-            <Typography sx={{ color: "#91C73E", p: 1 }} variant="span">
-              <Facebook />
-            </Typography>
-          </Link>
-        </Box>
+        <Social />
       </Box>
     </>
   );

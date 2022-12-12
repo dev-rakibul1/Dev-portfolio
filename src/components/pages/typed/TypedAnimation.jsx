@@ -15,7 +15,7 @@ const TypedAnimation = () => {
         "debugging code",
       ], // Strings to display
       // Speed settings, try diffrent values untill you get good results
-      startDelay: 1000,
+      startDelay: 10,
       typeSpeed: 5,
       backSpeed: 5,
       backDelay: 1000,
