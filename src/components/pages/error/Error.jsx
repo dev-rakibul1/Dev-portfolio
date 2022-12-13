@@ -1,5 +1,4 @@
-import { Button, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import { Link, useRouteError } from "react-router-dom";
 const images = "https://i.ibb.co/2Zqwmd2/9467819-4140519.jpg";
@@ -8,7 +7,7 @@ const Error = () => {
   const error = useRouteError();
 
   return (
-    <>
+    <Box>
       <Box
         className="error"
         sx={{
@@ -44,7 +43,7 @@ const Error = () => {
           </Button>
         </Link>
       </Box>
-    </>
+    </Box>
   );
 };
 

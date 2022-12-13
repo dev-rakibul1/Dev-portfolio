@@ -1,15 +1,15 @@
 import {
   Box,
   CardActionArea,
-  CardMedia,
-  Grid,
-  Typography,
+  CardMedia, Grid,
+  Typography
 } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import Social from "../shared/spinner/social/Social";
+import Spinner from "../shared/spinner/Spinner";
 
 const bull = (
   <Box
@@ -21,7 +21,7 @@ const bull = (
 );
 
 const About = () => {
-  const { data: skills } = useQuery({
+  const { data: skills, isLoading } = useQuery({
     queryKey: ["skills"],
     queryFn: async () => {
       const res = await fetch("skill.json");
@@ -29,6 +29,9 @@ const About = () => {
       return data;
     },
   });
+  if (isLoading) {
+    return <Spinner />;
+  }
 
   return (
     <Box sx={{ pt: 14 }} className="about-manage">
@@ -70,6 +73,7 @@ const About = () => {
 
               {/* PROFESSIONAL SUMMARY */}
               <Typography
+                color="primary"
                 sx={{
                   mb: 1.5,
                   fontSize: "17px",
@@ -98,6 +102,7 @@ const About = () => {
 
               {/* SKILLS SUMMARY*/}
               <Typography
+                color="primary"
                 sx={{
                   mb: 1.5,
                   fontSize: "17px",
@@ -151,11 +156,12 @@ const About = () => {
           {/* skill column */}
           <Typography
             variant="h4"
+            color="primary"
             sx={{
-              color: "primary",
               textAlign: "center",
               mb: 2,
-              fontSize: "27px",
+              fontSize: "22px",
+              textTransform: "uppercase",
             }}
           >
             My Skills

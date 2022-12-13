@@ -12,7 +12,7 @@ const HeroInfo = () => {
           variant="h2"
         >
           I'm{" "}
-          <Typography sx={{ color: "#FF4321" }} variant="span">
+          <Typography color="primary" variant="span">
             Rakibul
           </Typography>{" "}
           Islam

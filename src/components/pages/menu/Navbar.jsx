@@ -15,19 +15,48 @@ const Navbar = () => {
   const navItems = (
     <>
       <NavLink className="navbarItems" to="/">
-        <Tab label="Home" />
+        <Tab
+          sx={{
+            fontFamily: "'Jost', sans-serif",
+            fontWeight: "600",
+            textTransform: "uppercase",
+            fontSize: "15px",
+          }}
+          label="Home"
+        />
       </NavLink>
       <NavLink className="navbarItems" to="/about">
-        <Tab label="About" />
+        <Tab
+          sx={{
+            fontFamily: "'Jost', sans-serif",
+            fontWeight: "600",
+            textTransform: "uppercase",
+            fontSize: "15px",
+          }}
+          label="About"
+        />
       </NavLink>
       <NavLink className="navbarItems" to="/projects">
-        <Tab label="Project" />
+        <Tab
+          sx={{
+            fontFamily: "'Jost', sans-serif",
+            fontWeight: "600",
+            textTransform: "uppercase",
+            fontSize: "15px",
+          }}
+          label="Project"
+        />
       </NavLink>
       <NavLink className="navbarItems" to="/contact">
-        <Tab label="Contact me" />
-      </NavLink>
-      <NavLink className="navbarItems" to="/hire">
-        <Tab label="Hire me" />
+        <Tab
+          sx={{
+            fontFamily: "'Jost', sans-serif",
+            fontWeight: "600",
+            textTransform: "uppercase",
+            fontSize: "15px",
+          }}
+          label="Contact me"
+        />
       </NavLink>
     </>
   );
@@ -40,7 +69,7 @@ const Navbar = () => {
       <AppBar
         sx={{
           backgroundColor: "transparent",
-          maxWidth: "lg",
+          minWidth: "xl",
           margin: "0 auto",
           left: 0,
           top: 0,
@@ -48,10 +77,20 @@ const Navbar = () => {
           boxShadow: 0,
         }}
       >
-        <Toolbar>
+        <Toolbar
+          style={{ margin: 0, padding: "10px" }}
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItem: "center",
+            width: "100%",
+            margin: 0,
+            padding: 0,
+          }}
+        >
           {/* Navbar brand */}
           <Link to="/">
-            <Typography sx={{ maxWidth: "80px" }}>
+            <Typography>
               <img
                 style={{ maxWidth: "220px" }}
                 src="https://i.ibb.co/FWgyC41/Rakibul2-01.png"

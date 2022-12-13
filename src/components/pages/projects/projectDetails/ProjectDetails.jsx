@@ -39,7 +39,12 @@ const ProjectDetails = () => {
               >
                 Project name:
               </Typography>
-              <Typography sx={{ mt: "-12px" }} variant="h5" component="div">
+              <Typography
+                color="primary"
+                sx={{ mt: "-12px" }}
+                variant="h5"
+                component="div"
+              >
                 {title}
               </Typography>
               <Typography
@@ -64,7 +69,10 @@ const ProjectDetails = () => {
                   }}
                   variant="body2"
                 >
-                  <PanToolAltIcon sx={{ transform: "rotate(90deg)" }} />{" "}
+                  <PanToolAltIcon
+                    color=""
+                    sx={{ transform: "rotate(90deg)" }}
+                  />{" "}
                   {moreDet[0]}
                 </Typography>
                 <Typography
@@ -76,7 +84,10 @@ const ProjectDetails = () => {
                   }}
                   variant="body2"
                 >
-                  <PanToolAltIcon sx={{ transform: "rotate(90deg)" }} />{" "}
+                  <PanToolAltIcon
+                    color=""
+                    sx={{ transform: "rotate(90deg)" }}
+                  />{" "}
                   {moreDet[1]}
                 </Typography>
                 <Typography
@@ -88,7 +99,10 @@ const ProjectDetails = () => {
                   }}
                   variant="body2"
                 >
-                  <PanToolAltIcon sx={{ transform: "rotate(90deg)" }} />{" "}
+                  <PanToolAltIcon
+                    color=""
+                    sx={{ transform: "rotate(90deg)" }}
+                  />{" "}
                   {moreDet[2]}
                 </Typography>
               </Box>

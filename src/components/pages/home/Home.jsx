@@ -6,7 +6,7 @@ import HeroInfo from "./heroInfo/HeroInfo";
 
 const home = () => {
   return (
-    <>
+    <Box>
       <Box
         sx={{
           display: "flex",
@@ -14,18 +14,21 @@ const home = () => {
           justifyContent: "space-between",
           alignItems: "center",
           width: "100%",
+          px: "15px",
         }}
       >
-        <Grid rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid sm="auto" md={6}>
-            <HeroInfo />
+        <Box>
+          <Grid rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            <Grid sm="auto" md={6}>
+              <HeroInfo />
+            </Grid>
+            <Grid sm="auto" md={6}>
+              <HeroImg />
+            </Grid>
           </Grid>
-          <Grid sm="auto" md={6}>
-            <HeroImg />
-          </Grid>
-        </Grid>
+        </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 

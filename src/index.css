@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,600&display=swap");
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -14,20 +15,30 @@ code {
 
 html,
 body {
-  background-color: #adbcff;
+  background-color: #adbcff !important;
   font-family: "Calibri";
-  box-shadow: 1px -2px 16px 3px #1d2340;
+  height: 100%;
+  width: 100%;
 }
 
-.wrap {
-  background-color: #adbcff;
+/* .wrap {
+  margin: 50px auto;
+} */
+
+.root-wrap {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
+  height: 600px;
+  min-height: 100vh;
 }
+
+/* .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
 
 .error {
   position: relative;
@@ -45,7 +56,6 @@ body {
   z-index: -1;
 }
 .navbarItems {
-  font-weight: 600;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   color: #000;
@@ -79,11 +89,10 @@ body {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 2%;
   width: 38.33%;
   height: 75%;
-  background-color: #fff;
-  border: 15px solid red;
+  background-color: #1c0061;
   z-index: -1;
 }
 
@@ -206,7 +215,7 @@ body {
   left: 50%;
   width: 52%;
   min-height: 600px;
-  background-color: #e5e5e5;
+  background-color: #e6dff9;
   opacity: 1;
   z-index: -1;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);

@@ -3,28 +3,21 @@ import { createTheme } from "@mui/material";
 const themes = createTheme({
   palette: {
     primary: {
-      main: "#375b00",
+      main: "#5200EE",
     },
   },
 
   components: {
     MuiContainer: {
       defaultProps: {
-        maxWidth: "lg",
-        minHeight: "xl",
+        // maxWidth: "lg",
       },
     },
   },
 
   MuiButton: {
     styleOverrides: {
-      root: {
-        fontSize: ".8rem",
-        padding: ".5rem, 1.4rem",
-        textTransform: "capitalize",
-        borderRadius: "40px",
-        color: "#191919",
-      },
+      root: {},
     },
     defaultProps: {
       variant: "contained",

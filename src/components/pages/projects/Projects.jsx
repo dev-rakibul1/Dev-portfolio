@@ -28,101 +28,104 @@ function Projects() {
   }
 
   return (
-    <Box className="project-shape">
-      <Box
-        className="project-manage"
-        sx={{
-          pt: 14,
-          //   backgroundImage: `url(${projectShape})`,
-          //   backgroundPosition: "top",
-          //   backgroundRepeat: "no-repeat",
-          //   backgroundSize: "cover",
-          //   bottom: 0,
-        }}
-      >
-        <Grid container spacing={3}>
-          {/* project article */}
-          <Grid item xs={12} sm={6} md={6}>
-            <Typography
-              variant="h4"
-              sx={{
-                textTransform: "uppercase",
-                fontWeight: "light",
-                fontFamily: "calibri",
-                color: "#fff",
-              }}
-            >
-              Projects
-            </Typography>
-            <Typography
-              sx={{
-                textTransform: "uppercase",
-                fontWeight: "light",
-                fontFamily: "calibri",
-                fontSize: "14px",
-                color: "#fff",
-              }}
-              variant="small"
-            >
-              {" "}
-              My favourite four projects{" "}
-            </Typography>
+    <Box>
+      <Box className="project-shape">
+        <Box
+          className="project-manage"
+          sx={{
+            pt: 14,
+            px: "15px",
+            //   backgroundImage: `url(${projectShape})`,
+            //   backgroundPosition: "top",
+            //   backgroundRepeat: "no-repeat",
+            //   backgroundSize: "cover",
+            //   bottom: 0,
+          }}
+        >
+          <Grid container spacing={3}>
+            {/* project article */}
+            <Grid item xs={12} sm={6} md={6}>
+              <Typography
+                variant="h4"
+                sx={{
+                  textTransform: "uppercase",
+                  fontWeight: "light",
+                  fontFamily: "calibri",
+                  color: "#fff",
+                }}
+              >
+                Projects
+              </Typography>
+              <Typography
+                sx={{
+                  textTransform: "uppercase",
+                  fontWeight: "light",
+                  fontFamily: "calibri",
+                  fontSize: "14px",
+                  color: "#fff",
+                }}
+                variant="small"
+              >
+                {" "}
+                My favourite four projects{" "}
+              </Typography>
 
-            <Typography
-              sx={{
-                fontFamily: "calibri",
-                fontWeight: "light",
-                mt: 2,
-                color: "#fff",
-              }}
-            >
-              An intensive long coding Bootcamp in which I learned to design and
-              build web applications from the front -end to back-end with the
-              MERN stack (MongoDB, Express.js, React.js, Node.js).{" "}
-            </Typography>
-          </Grid>
+              <Typography
+                sx={{
+                  fontFamily: "calibri",
+                  fontWeight: "light",
+                  mt: 2,
+                  color: "#fff",
+                }}
+              >
+                An intensive long coding Bootcamp in which I learned to design
+                and build web applications from the front -end to back-end with
+                the MERN stack (MongoDB, Express.js, React.js, Node.js).{" "}
+              </Typography>
+            </Grid>
 
-          {/* project images or details */}
-          <Grid item xs={12} sm={6} md={6}>
-            <ImageList>
-              {/* project images */}
+            {/* project images or details */}
+            <Grid item xs={12} sm={6} md={6}>
+              <ImageList>
+                {/* project images */}
 
-              {projectInfo?.map((project) => (
-                <Grid container spacing={1} key={project._id}>
-                  <Grid item xs={12} style={{ maxWidth: "100%" }}>
-                    <ImageListItem key={project?._id}>
-                      <img
-                        style={{ maxWidth: "100%" }}
-                        src={`${project?.img1}?w=248&fit=crop&auto=format`}
-                        srcSet={`${project?.img1}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                        alt={project?.title}
-                        loading="lazy"
-                      />
-                      <ImageListItemBar
-                        title={project?.title}
-                        subtitle={project?.author}
-                        actionIcon={
-                          <Link
-                            title="Project details"
-                            to={`/projectDetails/${project._id}`}
-                            style={{ zIndex: "5" }}
-                          >
-                            <IconButton
-                              sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                              aria-label={`info about ${project.title}`}
+                {projectInfo?.map((project) => (
+                  <Grid container spacing={1} key={project._id}>
+                    <Grid item xs={12} style={{ maxWidth: "100%" }}>
+                      <ImageListItem key={project?._id}>
+                        <img
+                          style={{ maxWidth: "100%" }}
+                          src={`${project?.img1}?w=248&fit=crop&auto=format`}
+                          srcSet={`${project?.img1}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                          alt={project?.title}
+                          loading="lazy"
+                        />
+                        <ImageListItemBar
+                          title={project?.title}
+                          subtitle={project?.author}
+                          actionIcon={
+                            <Link
+                              title="Project details"
+                              to={`/projectDetails/${project._id}`}
+                              style={{ zIndex: "5" }}
                             >
-                              <InfoIcon />
-                            </IconButton>
-                          </Link>
-                        }
-                      />
-                    </ImageListItem>
+                              <IconButton
+                                sx={{ color: "rgba(255, 255, 255, 0.54)" }}
+                                aria-label={`info about ${project.title}`}
+                              >
+                                <InfoIcon />
+                              </IconButton>
+                            </Link>
+                          }
+                        />
+                      </ImageListItem>
+                    </Grid>
                   </Grid>
-                </Grid>
-              ))}
-            </ImageList>
+                ))}
+              </ImageList>
+            </Grid>
           </Grid>
-        </Grid>
+        </Box>
       </Box>
     </Box>
   );

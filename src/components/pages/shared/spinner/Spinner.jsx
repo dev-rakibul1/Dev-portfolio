@@ -7,7 +7,7 @@ const Spinner = () => {
       sx={{
         display: "grid",
         placeItems: "center",
-        height: "100vh",
+        minHeight: "600px",
       }}
     >
       <Box sx={{ display: "flex" }}>
