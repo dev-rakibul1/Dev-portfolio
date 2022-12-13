@@ -1,3 +1,4 @@
+import DehazeIcon from "@mui/icons-material/Dehaze";
 import {
   Drawer,
   IconButton,
@@ -81,7 +82,9 @@ const ResponsiveDrawer = () => {
         <List>{navItems}</List>
       </Drawer>
       <IconButton onClick={() => setMenuDrawer(!menuDrawer)}>
-        <p>Icon</p>
+        <Typography variant="body2" sx={{ border: "1px solid #fff", p: 0.5 }}>
+          <DehazeIcon />
+        </Typography>
       </IconButton>
     </div>
   );

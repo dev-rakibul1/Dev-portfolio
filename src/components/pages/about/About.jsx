@@ -1,8 +1,9 @@
 import {
   Box,
   CardActionArea,
-  CardMedia, Grid,
-  Typography
+  CardMedia,
+  Grid,
+  Typography,
 } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -37,7 +38,7 @@ const About = () => {
     <Box sx={{ pt: 14 }} className="about-manage">
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
-          <Card sx={{ minWidth: 275 }}>
+          <Card sx={{ minWidth: 275, boxShadow: 0 }}>
             <CardContent>
               <Typography
                 sx={{ fontSize: 14, color: "primary" }}
@@ -171,6 +172,7 @@ const About = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              px: 2,
             }}
           >
             <Box

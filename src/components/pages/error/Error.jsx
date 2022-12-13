@@ -32,7 +32,10 @@ const Error = () => {
           404
         </Typography>
         <Typography variant="h3">Something is wrong</Typography>
-        <p>{error.statusText || error.message}</p>
+        <p>
+          {(error?.statusText ? "Your Page " + error.statusText : undefined) ||
+            error.message}
+        </p>
 
         <Link to="/">
           <Button
