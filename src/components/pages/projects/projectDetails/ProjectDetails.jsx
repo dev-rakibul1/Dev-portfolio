@@ -6,6 +6,8 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import React from "react";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 import { useLoaderData } from "react-router-dom";
 
 const bull = (
@@ -20,144 +22,203 @@ const bull = (
 const ProjectDetails = () => {
   const projectData = useLoaderData();
   console.log(projectData);
-  const { description, author, title, moreDet, img1, img2, img3 } = projectData;
+  const {
+    description,
+    author,
+    title,
+    moreDet,
+    img1,
+    img2,
+    img3,
+    liveWebsite,
+    clientCode,
+    serverCode,
+  } = projectData;
+
+  const openProjectInfo = (url) => {
+    window.open(url, "_blank", "noreferrer");
+  };
 
   return (
-    <Box
-      sx={{
-        pt: 14,
-      }}
-    >
-      <Grid container spacing={1}>
-        <Grid item xs={12} sm={12} md={6}>
-          <Card sx={{ minWidth: 275 }}>
-            <CardContent>
-              <Typography
-                sx={{ fontSize: 12 }}
-                color="text.secondary"
-                gutterBottom
-              >
-                Project name:
-              </Typography>
-              <Typography
-                color="primary"
-                sx={{ mt: "-12px" }}
-                variant="h5"
-                component="div"
-              >
-                {title}
-              </Typography>
-              <Typography
-                variant="small"
-                sx={{ mb: 1.5, fontSize: "13px", mt: "-20px", pt: "-20px" }}
-                color="text.secondary"
-              >
-                {author}
-              </Typography>
+    <PhotoProvider>
+      <Box
+        sx={{
+          pt: 14,
+        }}
+      >
+        <Grid container spacing={1}>
+          <Grid item xs={12} sm={12} md={6}>
+            <Card sx={{ minWidth: 275, boxShadow: 0 }}>
+              <CardContent>
+                <Typography
+                  sx={{ fontSize: 12 }}
+                  color="text.secondary"
+                  gutterBottom
+                >
+                  Project name:
+                </Typography>
+                <Typography
+                  color="primary"
+                  sx={{ mt: "-12px" }}
+                  variant="h5"
+                  component="div"
+                >
+                  {title}
+                </Typography>
+                <Typography
+                  variant="small"
+                  sx={{ mb: 1.5, fontSize: "13px", mt: "-20px", pt: "-20px" }}
+                  color="text.secondary"
+                >
+                  {author}
+                </Typography>
+
+                <Box
+                  sx={{
+                    mb: 2,
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      justifyContent: "start",
+                      alignItems: "center",
+                      mt: 2,
+                    }}
+                    variant="body2"
+                  >
+                    <PanToolAltIcon
+                      color=""
+                      sx={{ transform: "rotate(90deg)" }}
+                    />{" "}
+                    {moreDet[0]}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      justifyContent: "start",
+                      alignItems: "center",
+                      mt: 2,
+                    }}
+                    variant="body2"
+                  >
+                    <PanToolAltIcon
+                      color=""
+                      sx={{ transform: "rotate(90deg)" }}
+                    />{" "}
+                    {moreDet[1]}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      justifyContent: "start",
+                      alignItems: "center",
+                      mt: 2,
+                    }}
+                    variant="body2"
+                  >
+                    <PanToolAltIcon
+                      color=""
+                      sx={{ transform: "rotate(90deg)" }}
+                    />{" "}
+                    {moreDet[2]}
+                  </Typography>
+                </Box>
+
+                <Typography variant="body2">
+                  {description.slice(0, 500)}
+                </Typography>
+              </CardContent>
 
               <Box
                 sx={{
-                  mb: 2,
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "start",
                 }}
               >
-                <Typography
-                  sx={{
-                    display: "flex",
-                    justifyContent: "start",
-                    alignItems: "center",
-                    mt: 2,
-                  }}
-                  variant="body2"
-                >
-                  <PanToolAltIcon
-                    color=""
-                    sx={{ transform: "rotate(90deg)" }}
-                  />{" "}
-                  {moreDet[0]}
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    justifyContent: "start",
-                    alignItems: "center",
-                    mt: 2,
-                  }}
-                  variant="body2"
-                >
-                  <PanToolAltIcon
-                    color=""
-                    sx={{ transform: "rotate(90deg)" }}
-                  />{" "}
-                  {moreDet[1]}
-                </Typography>
-                <Typography
-                  sx={{
-                    display: "flex",
-                    justifyContent: "start",
-                    alignItems: "center",
-                    mt: 2,
-                  }}
-                  variant="body2"
-                >
-                  <PanToolAltIcon
-                    color=""
-                    sx={{ transform: "rotate(90deg)" }}
-                  />{" "}
-                  {moreDet[2]}
-                </Typography>
-              </Box>
+                {/* Live website */}
+                <CardActions>
+                  <Button
+                    size="small"
+                    variant="outlined"
+                    sx={{ backgroundColor: "primary" }}
+                    role="link"
+                    onClick={() => openProjectInfo(liveWebsite)}
+                  >
+                    Live preview
+                  </Button>
+                </CardActions>
 
-              <Typography variant="body2">
-                {description.slice(0, 500)}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                variant="outlined"
-                sx={{ backgroundColor: "primary" }}
+                {/* Client site code link */}
+                <CardActions>
+                  <Button
+                    size="small"
+                    variant="outlined"
+                    sx={{ backgroundColor: "primary" }}
+                    onClick={() => openProjectInfo(clientCode)}
+                  >
+                    Client code
+                  </Button>
+                </CardActions>
+
+                {/* Server site code link */}
+                <CardActions>
+                  <Button
+                    size="small"
+                    variant="outlined"
+                    sx={{ backgroundColor: "primary" }}
+                    onClick={() => openProjectInfo(serverCode)}
+                  >
+                    Server code
+                  </Button>
+                </CardActions>
+              </Box>
+            </Card>
+          </Grid>
+          <Grid sx={{ position: "relative" }} item xs={12} sm={12} md={6}>
+            <Box>
+              <Box
+                className="project-images-sort-one project-details-images"
+                variant="image"
               >
-                Live preview
-              </Button>
-            </CardActions>
-          </Card>
+                <PhotoView>
+                  <img
+                    src={img1}
+                    alt="project-images"
+                    style={{ maxWidth: "100%" }}
+                  />
+                </PhotoView>
+              </Box>
+              <Box
+                className="project-images-sort-two project-details-images"
+                variant="image"
+              >
+                <PhotoView>
+                  <img
+                    src={img2}
+                    alt="project-images"
+                    style={{ maxWidth: "100%" }}
+                  />
+                </PhotoView>
+              </Box>
+              <Box
+                className="project-images-sort-three project-details-images"
+                variant="image"
+              >
+                <PhotoView>
+                  <img
+                    src={img3}
+                    alt="project-images"
+                    style={{ maxWidth: "100%" }}
+                  />
+                </PhotoView>
+              </Box>
+            </Box>
+          </Grid>
         </Grid>
-        <Grid sx={{ position: "relative" }} item xs={12} sm={12} md={6}>
-          <Box>
-            <Box
-              className="project-images-sort-one project-details-images"
-              variant="image"
-            >
-              <img
-                src={img1}
-                alt="project-images"
-                style={{ maxWidth: "100%" }}
-              />
-            </Box>
-            <Box
-              className="project-images-sort-two project-details-images"
-              variant="image"
-            >
-              <img
-                src={img2}
-                alt="project-images"
-                style={{ maxWidth: "100%" }}
-              />
-            </Box>
-            <Box
-              className="project-images-sort-three project-details-images"
-              variant="image"
-            >
-              <img
-                src={img3}
-                alt="project-images"
-                style={{ maxWidth: "100%" }}
-              />
-            </Box>
-          </Box>
-        </Grid>
-      </Grid>
-    </Box>
+      </Box>
+    </PhotoProvider>
   );
 };
 

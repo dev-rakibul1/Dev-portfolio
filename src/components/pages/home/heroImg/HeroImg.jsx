@@ -22,12 +22,97 @@ const HeroImg = () => {
           }}
         />
       </Typography> */}
+
+      {/* React icon */}
       <Box
+        title="React"
         sx={{
           display: { xs: "none", sm: "none", md: "block" },
         }}
-        className="hero-shape"
+        className="hero-react"
       ></Box>
+
+      {/* node icon */}
+      <Box
+        title="Node.js"
+        sx={{
+          display: { xs: "none", sm: "none", md: "block" },
+        }}
+        className="hero-node"
+      ></Box>
+
+      {/* mongoDB icon */}
+      <Box
+        title="MongoDB"
+        sx={{
+          display: { xs: "none", sm: "none", md: "block" },
+        }}
+        className="hero-mongodb"
+      ></Box>
+
+      {/* express icon */}
+      <Box
+        title="Express"
+        sx={{
+          display: { xs: "none", sm: "none", md: "block" },
+        }}
+        className="hero-express"
+      ></Box>
+
+      {/* javascript icon */}
+      <Box
+        title="Javascript"
+        sx={{
+          display: { xs: "none", sm: "none", md: "block" },
+        }}
+        className="hero-javascript"
+      ></Box>
+
+      {/* firebase icon */}
+      <Box
+        title="Firebase"
+        sx={{
+          display: { xs: "none", sm: "none", md: "block" },
+        }}
+        className="hero-firebase"
+      ></Box>
+
+      {/* material icon */}
+      <Box
+        title="Material UI"
+        sx={{
+          display: { xs: "none", sm: "none", md: "block" },
+        }}
+        className="hero-materialUi"
+      ></Box>
+
+      {/* tailwind icon */}
+      <Box
+        title="Tailwind"
+        sx={{
+          display: { xs: "none", sm: "none", md: "block" },
+        }}
+        className="hero-tailwind"
+      ></Box>
+
+      {/* bootstrap icon */}
+      <Box
+        title="Bootstrap"
+        sx={{
+          display: { xs: "none", sm: "none", md: "block" },
+        }}
+        className="hero-bootstrap"
+      ></Box>
+
+      {/* socket io icon */}
+      <Box
+        title="Socket io"
+        sx={{
+          display: { xs: "none", sm: "none", md: "block" },
+        }}
+        className="hero-socketIo"
+      ></Box>
+
       <Typography variant="image" sx={{ zIndex: "20" }}>
         <img
           src="https://i.ibb.co/WxKGxP3/Rakibul.png"

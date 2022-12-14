@@ -17,7 +17,9 @@ function Projects() {
   const { data: projectInfo, isLoading } = useQuery({
     queryKey: ["projectInfo"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/projects");
+      const res = await fetch(
+        "https://my-portfolio-server-chi.vercel.app/projects"
+      );
       const data = await res.json();
       return data;
     },
@@ -94,7 +96,12 @@ function Projects() {
                     <Grid item xs={12} style={{ maxWidth: "100%" }}>
                       <ImageListItem key={project?._id}>
                         <img
-                          style={{ maxWidth: "100%" }}
+                          style={{
+                            maxWidth: "100%",
+                            width: "400px",
+                            height: "220px",
+                            backgroundPosition: "top"
+                          }}
                           src={`${project?.img1}?w=248&fit=crop&auto=format`}
                           srcSet={`${project?.img1}?w=248&fit=crop&auto=format&dpr=2 2x`}
                           alt={project?.title}
