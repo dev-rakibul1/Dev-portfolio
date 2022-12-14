@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import Social from "../../shared/spinner/social/Social";
 import TypedAnimation from "../../typed/TypedAnimation";
@@ -25,9 +25,10 @@ const HeroInfo = () => {
           stack (MongoDB, Express.js, React.js, Node.js).
         </Typography>
 
-        {/* <Button
+        <Button
           href="https://drive.google.com/file/d/1kUEAa-gyg2STpL14bHKTugeukOE3F3Q6/view?usp=share_link"
           download
+          target="_blank"
           sx={{
             mt: 2,
             textTransform: "capitalize",
@@ -36,16 +37,7 @@ const HeroInfo = () => {
           variant="contained"
         >
           Download CV
-        </Button> */}
-
-        <a
-          download="true"
-          target="_blank"
-          href="https://drive.google.com/file/d/1kUEAa-gyg2STpL14bHKTugeukOE3F3Q6/view?usp=share_link"
-          rel="downoad noreferrer"
-        >
-          download
-        </a>
+        </Button>
 
         <Social />
       </Box>

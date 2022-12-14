@@ -46,7 +46,7 @@ function Projects() {
         >
           <Grid container spacing={3}>
             {/* project article */}
-            <Grid item xs={12} sm={6} md={6}>
+            <Grid item xs={12} sm={6} md={6} sx={{ zIndex: 3 }}>
               <Typography
                 variant="h4"
                 sx={{
@@ -81,13 +81,14 @@ function Projects() {
                 }}
               >
                 An intensive long coding Bootcamp in which I learned to design
-                and build web applications from the front -end to back-end with
-                the MERN stack (MongoDB, Express.js, React.js, Node.js).{" "}
+                and build web <br /> applications from the front -end to
+                back-end with the MERN stack (MongoDB, Express.js, React.js,
+                Node.js).{" "}
               </Typography>
             </Grid>
 
             {/* project images or details */}
-            <Grid item xs={12} sm={6} md={6}>
+            <Grid item xs={12} sm={6} md={6} sx={{ zIndex: 5 }}>
               <ImageList>
                 {/* project images */}
 
@@ -100,7 +101,7 @@ function Projects() {
                             maxWidth: "100%",
                             width: "400px",
                             height: "220px",
-                            backgroundPosition: "top"
+                            backgroundPosition: "top",
                           }}
                           src={`${project?.img1}?w=248&fit=crop&auto=format`}
                           srcSet={`${project?.img1}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -108,6 +109,7 @@ function Projects() {
                           loading="lazy"
                         />
                         <ImageListItemBar
+                          sx={{ zIndex: 3 }}
                           title={project?.title}
                           subtitle={project?.author}
                           actionIcon={
@@ -117,7 +119,11 @@ function Projects() {
                               style={{ zIndex: "5" }}
                             >
                               <IconButton
-                                sx={{ color: "rgba(255, 255, 255, 0.54)" }}
+                                className="project-btn"
+                                sx={{
+                                  color: "rgba(255, 255, 255, 0.54)",
+                                  mx: 2,
+                                }}
                                 aria-label={`info about ${project.title}`}
                               >
                                 <InfoIcon />
