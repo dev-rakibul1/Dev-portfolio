@@ -26,7 +26,7 @@ const HeroInfo = () => {
         </Typography>
 
         <Button
-          href="https://drive.google.com/file/d/1kUEAa-gyg2STpL14bHKTugeukOE3F3Q6/view?usp=share_link"
+          href="Resume.pdf"
           download
           target="_blank"
           sx={{

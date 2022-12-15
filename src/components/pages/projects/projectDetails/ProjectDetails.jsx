@@ -8,7 +8,54 @@ import Typography from "@mui/material/Typography";
 import React from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+
+import CloseIcon from "@mui/icons-material/Close";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import IconButton from "@mui/material/IconButton";
+import { styled } from "@mui/material/styles";
+
+// modal function
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  "& .MuiDialogContent-root": {
+    padding: theme.spacing(2),
+  },
+  "& .MuiDialogActions-root": {
+    padding: theme.spacing(1),
+  },
+}));
+
+export interface DialogTitleProps {
+  id: string;
+  children?: React.ReactNode;
+  onClose: () => void;
+}
+
+function BootstrapDialogTitle(props: DialogTitleProps) {
+  const { children, onClose, ...other } = props;
+
+  return (
+    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+      {children}
+      {onClose ? (
+        <IconButton
+          aria-label="close"
+          onClick={onClose}
+          sx={{
+            position: "absolute",
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+      ) : null}
+    </DialogTitle>
+  );
+}
 
 const bull = (
   <Box
@@ -37,6 +84,15 @@ const ProjectDetails = () => {
 
   const openProjectInfo = (url) => {
     window.open(url, "_blank", "noreferrer");
+  };
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
   };
 
   return (
@@ -126,7 +182,28 @@ const ProjectDetails = () => {
                 </Box>
 
                 <Typography variant="body2">
-                  {description.slice(0, 500)}
+                  {description.slice(0, 500)}{" "}
+                  <Link variant="outlined" onClick={handleClickOpen}>
+                    Read more
+                  </Link>
+                  {/* modal */}
+                  <div>
+                    <BootstrapDialog
+                      onClose={handleClose}
+                      aria-labelledby="customized-dialog-title"
+                      open={open}
+                    >
+                      <BootstrapDialogTitle
+                        id="customized-dialog-title"
+                        onClose={handleClose}
+                      >
+                        {title}
+                      </BootstrapDialogTitle>
+                      <DialogContent dividers>
+                        <Typography gutterBottom>{description}</Typography>
+                      </DialogContent>
+                    </BootstrapDialog>
+                  </div>
                 </Typography>
               </CardContent>
 

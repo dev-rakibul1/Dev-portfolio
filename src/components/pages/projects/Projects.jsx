@@ -1,9 +1,7 @@
 import InfoIcon from "@mui/icons-material/Info";
-import { Grid, Typography } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
+import { Grid, IconButton, Typography } from "@mui/material";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { Box } from "@mui/system";
 import { useQuery } from "@tanstack/react-query";
 
@@ -54,6 +52,7 @@ function Projects() {
                   fontWeight: "light",
                   fontFamily: "calibri",
                   color: "#fff",
+                  fontWeight: 600,
                 }}
               >
                 Projects
@@ -69,7 +68,7 @@ function Projects() {
                 variant="small"
               >
                 {" "}
-                My favourite four projects{" "}
+                My favorite four projects{" "}
               </Typography>
 
               <Typography
@@ -77,7 +76,7 @@ function Projects() {
                   fontFamily: "calibri",
                   fontWeight: "light",
                   mt: 2,
-                  color: "#fff",
+                  color: { xs: "#000", sm: "#ffff" },
                 }}
               >
                 An intensive long coding Bootcamp in which I learned to design
@@ -89,26 +88,90 @@ function Projects() {
 
             {/* project images or details */}
             <Grid item xs={12} sm={6} md={6} sx={{ zIndex: 5 }}>
-              <ImageList>
-                {/* project images */}
+              {/* project images */}
+              <Box sx={{ width: "100%", height: 450, overflowY: "scroll" }}>
+                <ImageList
+                  variant="masonry"
+                  item
+                  xs={12}
+                  sm={6}
+                  cols={2}
+                  gap={15}
+                >
+                  {projectInfo?.map((item) => (
+                    <ImageListItem
+                      className="project-images-box"
+                      key={item._i}
+                      sx={{
+                        display: { sx: 12, sm: 2, md: 3 },
+                        position: "relative",
+                      }}
+                    >
+                      <img
+                        style={{
+                          boxShadow:
+                            "rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px",
+                        }}
+                        src={`${item.img1}?w=248&fit=crop&auto=format`}
+                        srcSet={`${item.img1}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                        alt={item.title}
+                        loading="lazy"
+                      />
+                      {/* <ImageListItemBar position="below" title={item.author} /> */}
+                      <Box className="project-images-hover">
+                        <Typography
+                          sx={
+                            {
+                              // fontFamily: "calibri",
+                              // fontSize: "22px",
+                              // fontWeight: "light",
+                            }
+                          }
+                          variant="span"
+                        >
+                          {item?.title}
+                        </Typography>
+                        <Link
+                          to={`/projectDetails/${item._id}`}
+                          style={{ zIndex: "5" }}
+                        >
+                          <IconButton
+                            className="project-btn"
+                            sx={{
+                              color: "rgba(255, 255, 255, 0.54)",
+                            }}
+                            aria-label={`info about ${item.title}`}
+                          >
+                            <InfoIcon />
+                          </IconButton>
+                        </Link>
+                      </Box>
+                    </ImageListItem>
+                  ))}
+                </ImageList>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+    </Box>
+  );
+}
 
-                {projectInfo?.map((project) => (
-                  <Grid container spacing={1} key={project._id}>
-                    <Grid item xs={12} style={{ maxWidth: "100%" }}>
-                      <ImageListItem key={project?._id}>
-                        <img
-                          style={{
-                            maxWidth: "100%",
-                            width: "400px",
-                            height: "220px",
-                            backgroundPosition: "top",
-                          }}
-                          src={`${project?.img1}?w=248&fit=crop&auto=format`}
-                          srcSet={`${project?.img1}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                          alt={project?.title}
-                          loading="lazy"
-                        />
-                        <ImageListItemBar
+export default Projects;
+
+//  style={{
+//   maxWidth: "100%",
+//   width: "200px",
+//   height: "150px",
+//   backgroundPosition: "top",
+//   transform: "rotate(45deg)",
+//   boxShadow: "1px 1px 1pc",
+//   overflow: "none",
+// }}
+
+{
+  /* <ImageListItemBar
                           sx={{ zIndex: 3 }}
                           title={project?.title}
                           subtitle={project?.author}
@@ -130,18 +193,5 @@ function Projects() {
                               </IconButton>
                             </Link>
                           }
-                        />
-                      </ImageListItem>
-                    </Grid>
-                  </Grid>
-                ))}
-              </ImageList>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    </Box>
-  );
+                        /> */
 }
-
-export default Projects;
