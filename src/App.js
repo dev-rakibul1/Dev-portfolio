@@ -1,6 +1,7 @@
 import { Box, Container, ThemeProvider } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 
+import { Toaster } from "react-hot-toast";
 import { RouterProvider } from "react-router-dom";
 import router from "./components/router/Router";
 import "./components/styles/RootHero.css";
@@ -32,6 +33,7 @@ function App() {
           </Box>
         </Container>
       </div>
+      <Toaster />
     </>
   );
 }
