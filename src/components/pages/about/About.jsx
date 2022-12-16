@@ -9,6 +9,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
+import UseTitle from "../../hook/useTitle";
 import Social from "../shared/spinner/social/Social";
 import Spinner from "../shared/spinner/Spinner";
 
@@ -22,6 +23,7 @@ const bull = (
 );
 
 const About = () => {
+  UseTitle("About");
   const { data: skills, isLoading } = useQuery({
     queryKey: ["skills"],
     queryFn: async () => {

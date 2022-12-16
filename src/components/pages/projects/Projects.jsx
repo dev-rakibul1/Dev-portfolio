@@ -7,9 +7,11 @@ import { useQuery } from "@tanstack/react-query";
 
 import * as React from "react";
 import { Link } from "react-router-dom";
+import UseTitle from "../../hook/useTitle";
 import Spinner from "../shared/spinner/Spinner";
 
 function Projects() {
+  UseTitle("Project");
   const projectShape = "https://i.ibb.co/9wZxcFF/Iqra-themes.jpg";
 
   const { data: projectInfo, isLoading } = useQuery({

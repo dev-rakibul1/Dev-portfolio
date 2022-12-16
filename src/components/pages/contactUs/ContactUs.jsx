@@ -7,8 +7,10 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
+import UseTitle from "../../hook/useTitle";
 
 const ContactUs = () => {
+  UseTitle("Contact us");
   const [nameAlert, setNameAlert] = useState("");
   const [emailAlert, setEmailAlert] = useState("");
   const [phoneAlert, setPhoneAlert] = useState("");

@@ -16,6 +16,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import IconButton from "@mui/material/IconButton";
 import { styled } from "@mui/material/styles";
+import UseTitle from "../../../hook/useTitle";
 
 // modal function
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -67,6 +68,7 @@ const bull = (
 );
 
 const ProjectDetails = () => {
+  UseTitle("Project details");
   const projectData = useLoaderData();
   console.log(projectData);
   const {

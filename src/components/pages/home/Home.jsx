@@ -1,10 +1,12 @@
 import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import UseTitle from "../../hook/useTitle";
 import HeroImg from "./heroImg/HeroImg";
 import HeroInfo from "./heroInfo/HeroInfo";
 
 const home = () => {
+  UseTitle("Home");
   return (
     <Box>
       <Box
