@@ -4,6 +4,10 @@ import Social from "../../shared/spinner/social/Social";
 import TypedAnimation from "../../typed/TypedAnimation";
 
 const HeroInfo = () => {
+  const resumeDownload = (url) => {
+    window.open(url, "noreferrer");
+  };
+
   return (
     <>
       <Box className="hero">

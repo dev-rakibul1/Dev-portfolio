@@ -93,7 +93,7 @@ const Navbar = () => {
             <Typography>
               <img
                 style={{ maxWidth: "135px" }}
-                src="https://i.ibb.co/FWgyC41/Rakibul2-01.png"
+                src="https://i.ibb.co/BZs0fTX/logo.png"
                 alt="Logo"
               />
             </Typography>

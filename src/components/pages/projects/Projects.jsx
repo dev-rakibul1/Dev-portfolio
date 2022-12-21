@@ -102,11 +102,12 @@ function Projects() {
                 >
                   {projectInfo?.map((item) => (
                     <ImageListItem
-                      className="project-images-box"
+                      className="project-images-box project-wrap"
                       key={item._i}
                       sx={{
                         display: { sx: 12, sm: 2, md: 3 },
                         position: "relative",
+                        height: "10px",
                       }}
                     >
                       <img
@@ -141,6 +142,8 @@ function Projects() {
                             className="project-btn"
                             sx={{
                               color: "rgba(255, 255, 255, 0.54)",
+                              m: 0,
+                              p: 0,
                             }}
                             aria-label={`info about ${item.title}`}
                           >
@@ -161,39 +164,3 @@ function Projects() {
 }
 
 export default Projects;
-
-//  style={{
-//   maxWidth: "100%",
-//   width: "200px",
-//   height: "150px",
-//   backgroundPosition: "top",
-//   transform: "rotate(45deg)",
-//   boxShadow: "1px 1px 1pc",
-//   overflow: "none",
-// }}
-
-{
-  /* <ImageListItemBar
-                          sx={{ zIndex: 3 }}
-                          title={project?.title}
-                          subtitle={project?.author}
-                          actionIcon={
-                            <Link
-                              title="Project details"
-                              to={`/projectDetails/${project._id}`}
-                              style={{ zIndex: "5" }}
-                            >
-                              <IconButton
-                                className="project-btn"
-                                sx={{
-                                  color: "rgba(255, 255, 255, 0.54)",
-                                  mx: 2,
-                                }}
-                                aria-label={`info about ${project.title}`}
-                              >
-                                <InfoIcon />
-                              </IconButton>
-                            </Link>
-                          }
-                        /> */
-}

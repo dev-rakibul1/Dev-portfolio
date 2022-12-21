@@ -13,6 +13,8 @@ const TypedAnimation = () => {
         "Project management",
         "Creative design",
         "debugging code",
+        "React developer",
+        "Jr. MERN stack developer",
       ], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 10,

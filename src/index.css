@@ -482,7 +482,7 @@ body {
   width: 100%;
   height: 100%;
   flex-direction: column;
-  padding: 10px;
+  /* padding: 10px; */
   visibility: hidden;
   font-size: 0;
   transition: 0.3s ease-in-out;
@@ -515,12 +515,23 @@ body {
   opacity: 1;
   font-size: 22px;
 }
-.contact-bg {
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.38);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9.6px);
-  -webkit-backdrop-filter: blur(9.6px);
-  border: 1px solid rgba(255, 255, 255, 0.96);
+
+/* portfolio animation */
+
+.project-wrap {
+  width: 100%;
+  height: 250px !important;
+  overflow: hidden;
+}
+.project-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: all 2s ease-in-out;
+  cursor: pointer;
+}
+
+.project-wrap:hover img {
+  object-position: bottom center;
 }
