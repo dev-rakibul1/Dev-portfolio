@@ -10,9 +10,13 @@ const HeroInfo = () => {
 
   return (
     <>
-      <Box className="hero">
+      <Box className="hero" sx={{ zIndex: 1 }}>
         <Typography
-          sx={{ fontFamily: "calibri", fontWeight: "bold" }}
+          sx={{
+            fontFamily: "calibri",
+            fontWeight: "bold",
+            fontSize: { xs: "25px", sm: "40px", md: "60px" },
+          }}
           variant="h2"
         >
           I'm{" "}
@@ -36,7 +40,9 @@ const HeroInfo = () => {
           sx={{
             mt: 2,
             textTransform: "capitalize",
-            boxShadow: "1px 1px 1pc #ff432191",
+            // boxShadow: "1px 1px 1pc #ff432191",
+            boxShadow:
+              "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
           }}
           variant="contained"
         >

@@ -98,7 +98,7 @@ body {
 /* React icon */
 @media (prefers-reduced-motion: no-preference) {
   .hero-react {
-    animation: reactLogo infinite 20s linear;
+    animation: reactLogo infinite 8s linear;
     /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
     position: absolute;
     top: 35%;

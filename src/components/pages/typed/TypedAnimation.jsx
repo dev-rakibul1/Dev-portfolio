@@ -41,10 +41,10 @@ const TypedAnimation = () => {
       {/* Element to display typing strings */}
       <Typography
         sx={{
-          fontSize: "40px",
-          fontWeight: 200,
           fontFamily: "calibri",
           marginTop: "-20px",
+          fontSize: { xs: "18px", sm: "24px", md: "40px" },
+          fontWeight: { xs: "600", sm: "200", md: "200" },
         }}
         ref={el}
         variant="span"

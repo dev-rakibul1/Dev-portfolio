@@ -1,5 +1,6 @@
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import {
+  Box,
   Drawer,
   IconButton,
   List,
@@ -35,34 +36,34 @@ const navItems = (
         </ListItemIcon>
       </ListItemButton>
     </Link>
-    <Link to="/">
+    <Link to="/about">
       <ListItemButton>
         <ListItemIcon>
           <ListItemText>About</ListItemText>
         </ListItemIcon>
       </ListItemButton>
     </Link>
-    <Link to="/">
+    <Link to="/projects">
       <ListItemButton>
         <ListItemIcon>
           <ListItemText>Project</ListItemText>
         </ListItemIcon>
       </ListItemButton>
     </Link>
-    <Link to="/">
+    <Link to="/contact">
       <ListItemButton>
         <ListItemIcon>
           <ListItemText>Contact me</ListItemText>
         </ListItemIcon>
       </ListItemButton>
     </Link>
-    <Link to="/">
+    {/* <Link to="/">
       <ListItemButton>
         <ListItemIcon>
           <ListItemText>Hire me</ListItemText>
         </ListItemIcon>
       </ListItemButton>
-    </Link>
+    </Link> */}
   </>
 );
 
@@ -70,7 +71,7 @@ const ResponsiveDrawer = () => {
   const [menuDrawer, setMenuDrawer] = useState(false);
 
   return (
-    <div>
+    <Box sx={{ minHeight: "600vh" }}>
       {/* Responsive drawer */}
       <Drawer
         open={menuDrawer}
@@ -86,7 +87,7 @@ const ResponsiveDrawer = () => {
           <DehazeIcon />
         </Typography>
       </IconButton>
-    </div>
+    </Box>
   );
 };
 

@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 import UseTitle from "../../hook/useTitle";
 import Spinner from "../shared/spinner/Spinner";
 
+import Tooltip from "@mui/material/Tooltip";
+
 function Projects() {
   UseTitle("Project");
   const projectShape = "https://i.ibb.co/9wZxcFF/Iqra-themes.jpg";
@@ -134,22 +136,25 @@ function Projects() {
                         >
                           {item?.title}
                         </Typography>
-                        <Link
-                          to={`/projectDetails/${item._id}`}
-                          style={{ zIndex: "5" }}
-                        >
-                          <IconButton
-                            className="project-btn"
-                            sx={{
-                              color: "rgba(255, 255, 255, 0.54)",
-                              m: 0,
-                              p: 0,
-                            }}
-                            aria-label={`info about ${item.title}`}
+
+                        <Tooltip title="Project details">
+                          <Link
+                            to={`/projectDetails/${item._id}`}
+                            style={{ zIndex: "5" }}
                           >
-                            <InfoIcon />
-                          </IconButton>
-                        </Link>
+                            <IconButton
+                              className="project-btn"
+                              sx={{
+                                color: "rgba(255, 255, 255, 0.54)",
+                                m: 0,
+                                p: 0,
+                              }}
+                              aria-label={`info about ${item.title}`}
+                            >
+                              <InfoIcon />
+                            </IconButton>
+                          </Link>
+                        </Tooltip>
                       </Box>
                     </ImageListItem>
                   ))}

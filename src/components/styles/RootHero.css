@@ -18,3 +18,17 @@
   font-size: 40px;
   font-family: "calibri";
 }
+
+@media only screen and (max-width: 600px) {
+  .typed-cursor {
+    font-size: 20px !important;
+    font-family: "calibri";
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .typed-cursor {
+    font-size: 30px;
+    font-family: "calibri";
+  }
+}

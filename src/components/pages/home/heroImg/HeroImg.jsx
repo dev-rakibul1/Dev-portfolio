@@ -113,7 +113,7 @@ const HeroImg = () => {
         className="hero-socketIo"
       ></Box>
 
-      <Typography variant="image" sx={{ zIndex: "20" }}>
+      <Typography variant="image" sx={{ zIndex: "-200" }}>
         <img
           src="https://i.ibb.co/WxKGxP3/Rakibul.png"
           alt="me"
@@ -122,6 +122,7 @@ const HeroImg = () => {
             position: "absolute",
             bottom: 0,
             right: "2%",
+            zIndex: "-1",
           }}
         />
       </Typography>

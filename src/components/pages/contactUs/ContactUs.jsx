@@ -113,6 +113,8 @@ const ContactUs = () => {
             maxWidth: { xs: "100%", sm: "100%", md: "50%" },
             margin: "0 auto",
             px: 4,
+            boxShadow: "1px 1px 1pc #e1e1e1",
+            padding: "38px",
           }}
           onSubmit={handleUserInput}
         >
