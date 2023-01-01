@@ -1,3 +1,4 @@
+import SendIcon from "@mui/icons-material/Send";
 import {
   Box,
   Button,
@@ -8,6 +9,7 @@ import {
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import UseTitle from "../../hook/useTitle";
+import ButtonSpinner from "../shared/buttonSpinner/ButtonSpinner";
 
 const ContactUs = () => {
   UseTitle("Contact us");
@@ -15,9 +17,23 @@ const ContactUs = () => {
   const [emailAlert, setEmailAlert] = useState("");
   const [phoneAlert, setPhoneAlert] = useState("");
   const [messageAlert, setMessageAlert] = useState("");
+  const [loadingSpinner, setLoadingSpinner] = useState(false);
+
+  const [inputValue, setInputValue] = useState("");
+
+  // const [disableMessage, setDisableMessage] = useState("");
+  let disabledData;
+  if (inputValue.length < 15) {
+    disabledData = "Message must be between 15 to 250 range";
+  }
+
+  function handleChange(event) {
+    setInputValue(event.target.value);
+  }
 
   const handleUserInput = (event) => {
     event.preventDefault();
+    setLoadingSpinner(true);
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
@@ -88,13 +104,17 @@ const ContactUs = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        setLoadingSpinner(false);
         if (data.success) {
           toast.success(data.message);
         } else {
           toast.error(data.error);
         }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        setLoadingSpinner(false);
+        console.log(error);
+      });
 
     form.reset();
   };
@@ -182,15 +202,35 @@ const ContactUs = () => {
               placeholder="Type your message..."
               style={{ width: "100%", minHeight: "100px" }}
               name="message"
+              value={inputValue}
+              onChange={handleChange}
             />
             <Typography sx={{ fontSize: "13px", color: "red" }} variant="small">
               {messageAlert}
             </Typography>
           </Box>
 
-          <Button variant="contained" type="submit">
-            Send message
-          </Button>
+          {inputValue && (
+            <Typography
+              variant="small"
+              sx={{ fontSize: "13px", py: 1, color: "red", display: "block" }}
+            >
+              {disabledData}
+            </Typography>
+          )}
+
+          {loadingSpinner ? (
+            <ButtonSpinner />
+          ) : (
+            <Button
+              disabled={inputValue.length < 15}
+              variant="contained"
+              type="submit"
+              sx={{ mt: 1 }}
+            >
+              Send message <SendIcon sx={{ ml: 1 }} />
+            </Button>
+          )}
         </Box>
       </Box>
     </Box>
