@@ -71,7 +71,7 @@ const ResponsiveDrawer = () => {
   const [menuDrawer, setMenuDrawer] = useState(false);
 
   return (
-    <Box sx={{ minHeight: "600vh" }}>
+    <Box>
       {/* Responsive drawer */}
       <Drawer
         open={menuDrawer}

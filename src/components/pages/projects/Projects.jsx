@@ -56,7 +56,6 @@ function Projects() {
                   fontWeight: "light",
                   fontFamily: "calibri",
                   color: "#fff",
-                  fontWeight: 600,
                 }}
               >
                 Projects
@@ -125,13 +124,12 @@ function Projects() {
                       {/* <ImageListItemBar position="below" title={item.author} /> */}
                       <Box className="project-images-hover">
                         <Typography
-                          sx={
-                            {
-                              // fontFamily: "calibri",
-                              // fontSize: "22px",
-                              // fontWeight: "light",
-                            }
-                          }
+                          sx={{
+                            // fontFamily: "calibri",
+                            // fontSize: "22px",
+                            // fontWeight: "light",
+                            fontSize: { xs: "14px", sm: "16px", md: "18px" },
+                          }}
                           variant="span"
                         >
                           {item?.title}

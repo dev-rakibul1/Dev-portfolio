@@ -214,6 +214,7 @@ const ProjectDetails = () => {
                   display: "flex",
                   flexWrap: "wrap",
                   justifyContent: "start",
+                  pb: { xs: "50px" },
                 }}
               >
                 {/* Live website */}
@@ -255,11 +256,21 @@ const ProjectDetails = () => {
               </Box>
             </Card>
           </Grid>
-          <Grid sx={{ position: "relative" }} item xs={12} sm={12} md={6}>
+          <Grid
+            sx={{
+              position: "relative",
+              maxHeight: { xs: "100vh", sm: "100vh" },
+            }}
+            item
+            xs={12}
+            sm={12}
+            md={6}
+          >
             <Box>
               <Box
                 className="project-images-sort-one project-details-images"
                 variant="image"
+                sx={{}}
               >
                 <PhotoView>
                   <img

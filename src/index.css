@@ -19,6 +19,7 @@ body {
   font-family: "Calibri";
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 /* .wrap {
@@ -26,12 +27,11 @@ body {
 } */
 
 .root-wrap {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 600px;
-  min-height: 100vh;
+  /* position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%); */
+  margin-top: 20px;
 }
 
 /* .clearfix::after {
@@ -408,18 +408,21 @@ body {
 
 /* project-details-images */
 .project-details-images {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   box-shadow: 1px 1px 1pc #000;
+  padding: 0 15px;
 }
 
 .project-images-sort-one {
+  position: absolute;
   max-width: 50%;
   left: 21%;
 }
 
 .project-images-sort-two {
+  position: absolute;
   max-width: 50%;
   left: 37%;
   top: 21%;
