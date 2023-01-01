@@ -33,7 +33,7 @@ const ContactUs = () => {
 
   const handleUserInput = (event) => {
     event.preventDefault();
-    setLoadingSpinner(true);
+
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
@@ -94,6 +94,7 @@ const ContactUs = () => {
       message: message,
     };
 
+    setLoadingSpinner(true);
     // post request
     fetch("https://my-portfolio-server-dev-rakibul1.vercel.app/user-message", {
       method: "POST",
@@ -117,6 +118,7 @@ const ContactUs = () => {
       });
 
     form.reset();
+    setInputValue("");
   };
 
   return (
