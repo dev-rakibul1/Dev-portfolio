@@ -34,7 +34,7 @@ const HeroInfo = () => {
         </Typography>
 
         <Button
-          href="Resume.pdf"
+          href="Resumev0.4.pdf"
           download
           target="_blank"
           sx={{
