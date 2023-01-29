@@ -52,7 +52,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #000;
-  opacity: 0.8;
+  opacity: 0.5;
   z-index: -1;
 }
 .navbarItems {
@@ -60,8 +60,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #000;
 }
+
+.home-nav-color a {
+  color: #fff;
+}
+
+/* .about-nav-color a {
+  color: blue;
+} */
 .active {
-  color: #ff5722;
+  color: blue !important;
 }
 
 /* .hero-bg {
@@ -194,10 +202,12 @@ body {
     animation: zoomIcon infinite 2s linear;
     /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
     position: absolute;
-    top: 25%;
-    right: 5%;
-    width: 5%;
-    height: 5%;
+
+    top: -8%;
+    left: 25%;
+    width: 2%;
+    height: 25%;
+
     background-image: url("https://i.ibb.co/LxLfQKx/js.png");
     z-index: -1;
     background-repeat: no-repeat;
@@ -278,10 +288,10 @@ body {
     animation: zoomIcon infinite 2s linear;
     /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
     position: absolute;
-    top: -10%;
-    left: 25%;
-    width: 3%;
-    height: 25%;
+    top: 25%;
+    right: 5%;
+    width: 5%;
+    height: 5%;
     background-image: url("https://i.ibb.co/ypHt1BN/bootstrap-icon-195906.png");
     z-index: -1;
     background-repeat: no-repeat;
@@ -471,6 +481,10 @@ body {
   100% {
     box-shadow: 0 0 0 15px transparent;
   }
+}
+
+.typed-cursor {
+  color: #fff;
 }
 
 .project-images-hover {

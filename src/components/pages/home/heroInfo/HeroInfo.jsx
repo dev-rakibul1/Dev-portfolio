@@ -16,6 +16,7 @@ const HeroInfo = () => {
             fontFamily: "calibri",
             fontWeight: "bold",
             fontSize: { xs: "25px", sm: "40px", md: "60px" },
+            color: "#fff",
           }}
           variant="h2"
         >
@@ -26,7 +27,7 @@ const HeroInfo = () => {
           Islam
         </Typography>
         <TypedAnimation />
-        <Typography variantMapping="p" sx={{ fontFamily: "calibri" }}>
+        <Typography variantMapping="p" sx={{ fontFamily: "calibri", color:"#fff" }}>
           An intensive long coding Bootcamp in which I learned to design and
           build <br />
           web applications from the front -end to back-end with <br /> the MERN

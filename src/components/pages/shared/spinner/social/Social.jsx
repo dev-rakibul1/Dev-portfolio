@@ -12,7 +12,16 @@ const Social = () => {
   return (
     <>
       {/* Social icons */}
-      <Box sx={{ position: "absolute", bottom: 0, mb: 2 }}>
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: 0,
+          mb: 2,
+          backgroundImage:
+            "linear-gradient(180deg,transparent, #fff, transparent ) !important",
+          py: 2,
+        }}
+      >
         <Link
           role="link"
           onClick={() => socialIcon("https://github.com/dev-rakibul1")}

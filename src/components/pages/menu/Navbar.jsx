@@ -7,11 +7,22 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import ResponsiveDrawer from "./ResponsiveDrawer";
 
 const Navbar = () => {
+  const [navClass, setNavClass] = useState("");
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setNavClass("home-nav-color");
+    } else if (location.pathname === "/about") {
+      setNavClass("about-nav-color");
+    }
+  }, [location]);
+
   const navItems = (
     <>
       <NavLink className="navbarItems" to="/">
@@ -100,7 +111,7 @@ const Navbar = () => {
           </Link>
 
           {/* Nav items */}
-          <Tabs sx={{ ml: "auto" }}>
+          <Tabs sx={{ ml: "auto" }} className={navClass}>
             {isMatch ? <ResponsiveDrawer /> : navItems}
           </Tabs>
         </Toolbar>

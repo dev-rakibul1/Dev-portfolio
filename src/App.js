@@ -3,10 +3,12 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 import { Toaster } from "react-hot-toast";
 import { RouterProvider } from "react-router-dom";
+import WaterWave from "react-water-wave";
 import router from "./components/router/Router";
 import "./components/styles/RootHero.css";
 import themes from "./components/themes/Themes";
-const heroImages = "https://i.ibb.co/tL2W75X/ezgif-com-gif-maker-5.jpg";
+const heroImages = "https://i.ibb.co/SPfh9Q5/city-be6db825.jpg";
+// https://i.ibb.co/SPfh9Q5/city-be6db825.jpg
 
 function App() {
   return (
@@ -26,10 +28,23 @@ function App() {
               background: "#fff",
             }}
           >
-            <ThemeProvider theme={themes}>
-              <CssBaseline />
-              <RouterProvider router={router}></RouterProvider>
-            </ThemeProvider>
+            <WaterWave
+              imageUrl={heroImages}
+              style={{
+                backgroundSize: "contain",
+                with: "100%",
+                height: "100%",
+                backgroundPosition: "center-bottom",
+              }}
+            >
+              {(methods) => (
+                /* children components */
+                <ThemeProvider theme={themes}>
+                  <CssBaseline />
+                  <RouterProvider router={router}></RouterProvider>
+                </ThemeProvider>
+              )}
+            </WaterWave>
           </Box>
         </Container>
       </div>

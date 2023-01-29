@@ -45,6 +45,7 @@ const TypedAnimation = () => {
           marginTop: "-20px",
           fontSize: { xs: "18px", sm: "24px", md: "40px" },
           fontWeight: { xs: "600", sm: "200", md: "200" },
+          color: "#fff",
         }}
         ref={el}
         variant="span"

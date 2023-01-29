@@ -37,7 +37,7 @@ const About = () => {
   }
 
   return (
-    <Box sx={{ pt: 14 }} className="about-manage">
+    <Box sx={{ pt: 14, bgcolor: "#fff" }} className="about-manage">
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <Card sx={{ minWidth: 275, boxShadow: 0 }}>

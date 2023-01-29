@@ -32,7 +32,7 @@ function Projects() {
   }
 
   return (
-    <Box>
+    <Box sx={{ bgcolor: "#fff" }}>
       <Box className="project-shape">
         <Box
           className="project-manage"

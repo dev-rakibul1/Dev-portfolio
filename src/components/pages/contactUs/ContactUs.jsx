@@ -126,6 +126,7 @@ const ContactUs = () => {
       className="contact-bg"
       sx={{
         pt: 14,
+        bgcolor: "#fff",
       }}
     >
       <Box>

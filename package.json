@@ -19,6 +19,7 @@
     "react-photo-view": "^1.2.3",
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
+    "react-water-wave": "^2.0.1",
     "styled-components": "^5.3.6",
     "typed.js": "^2.0.12",
     "web-vitals": "^2.1.4"
