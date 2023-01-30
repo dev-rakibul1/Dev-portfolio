@@ -444,30 +444,6 @@ body {
   top: 33%;
 }
 
-/* skill-summary */
-.skill-summary span {
-  display: inline-block;
-}
-
-.about-manage {
-  position: relative;
-  z-index: 1;
-  min-height: 600px;
-}
-
-.about-manage::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 52%;
-  min-height: 600px;
-  background-color: #e6dff9;
-  opacity: 1;
-  z-index: -1;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
 /* project details button */
 
 .project-btn {
