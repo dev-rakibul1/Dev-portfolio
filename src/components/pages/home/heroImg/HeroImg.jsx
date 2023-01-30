@@ -106,7 +106,6 @@ const HeroImg = () => {
 
       {/* socket io icon */}
       <Box
-        title="Socket io"
         sx={{
           display: { xs: "none", sm: "none", md: "block" },
         }}

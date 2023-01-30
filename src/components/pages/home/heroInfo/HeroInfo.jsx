@@ -1,5 +1,6 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
+import AnimationButton from "../../../typography/button/AnimationButton";
 import Social from "../../shared/spinner/social/Social";
 import TypedAnimation from "../../typed/TypedAnimation";
 
@@ -27,14 +28,17 @@ const HeroInfo = () => {
           Islam
         </Typography>
         <TypedAnimation />
-        <Typography variantMapping="p" sx={{ fontFamily: "calibri", color:"#fff" }}>
+        <Typography
+          variantMapping="p"
+          sx={{ fontFamily: "calibri", color: "#fff", mb: 2 }}
+        >
           An intensive long coding Bootcamp in which I learned to design and
           build <br />
           web applications from the front -end to back-end with <br /> the MERN
           stack (MongoDB, Express.js, React.js, Node.js).
         </Typography>
 
-        <Button
+        {/* <Button
           href="Resumev0.4.pdf"
           download
           target="_blank"
@@ -48,7 +52,10 @@ const HeroInfo = () => {
           variant="contained"
         >
           Download CV
-        </Button>
+        </Button> */}
+        <AnimationButton href="Resumev0.4.pdf" download target="_blank">
+          Download CV
+        </AnimationButton>
 
         <Social />
       </Box>

@@ -4,7 +4,7 @@
 }
 
 .root-hero::before {
-  background-color: #5200ee;
+  /* background-color: #5300ee36; */
   position: absolute;
   content: "";
   top: 0;
@@ -13,6 +13,14 @@
   height: 100%;
   transform: skewX(150deg);
   z-index: -1;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px 0 rgba(0.37, 0.37, 0.37, 0.37);
 }
 .typed-cursor {
   font-size: 40px;

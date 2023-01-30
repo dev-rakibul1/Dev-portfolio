@@ -1,0 +1,79 @@
+.button-wrapper {
+  cursor: pointer;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.button-wrapper::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-image: conic-gradient(transparent, red);
+}
+
+.button-wrapper .animation-btn {
+  position: relative;
+  list-style: none;
+  /* box-shadow: 0 0 5px gray, 0 0 5px gray, 0 0 5px gray, 0 0 5pc gray; */
+  /* filter: blur(15px); */
+  /* background-color: green; */
+}
+
+.button-wrapper .animation-btn .btn-link {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 1px 1px 1pc rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+  padding: 14px 35px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: 0.5s all ease-in-out;
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+  backdrop-filter: blur(15px);
+  border: 1px solid #322149;
+  font-weight: 600;
+}
+
+.button-wrapper .animation-btn:hover .btn-link {
+  letter-spacing: 0.5px;
+  overflow: hidden;
+}
+
+.button-wrapper .animation-btn .btn-link::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: 0.3s all ease-in-out;
+}
+.button-wrapper .animation-btn:hover .btn-link::before {
+  transform: skewX(45deg) translateX(200%);
+}
+
+.button-wrapper .animation-btn::before {
+  position: absolute;
+  content: "";
+  bottom: 5px;
+  left: 50%;
+  width: 30%;
+  height: 20%;
+  transform: translate(-50%);
+  transition: 0.3s all ease-in-out;
+  border-radius: 20px 20px 0 0;
+  background-color: red;
+  box-shadow: 0 0 5px red, 0 0 5px red, 0 0 5px red, 0 0 5px red;
+}
+
+.button-wrapper .animation-btn:hover::before {
+  width: 70%;
+  height: 50%;
+}

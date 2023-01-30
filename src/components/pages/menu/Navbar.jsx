@@ -9,17 +9,23 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import AnimationButton from "../../typography/button/AnimationButton";
 import ResponsiveDrawer from "./ResponsiveDrawer";
+const logo1 = "https://i.ibb.co/G2qy7fX/logo-white.png";
+const logo2 = "https://i.ibb.co/BZs0fTX/logo.png";
 
 const Navbar = () => {
   const [navClass, setNavClass] = useState("");
+  const [logo, setLogo] = useState(logo2);
   const location = useLocation();
 
   useEffect(() => {
     if (location.pathname === "/") {
       setNavClass("home-nav-color");
+      setLogo(logo1);
     } else if (location.pathname === "/about") {
       setNavClass("about-nav-color");
+      setLogo(logo2);
     }
   }, [location]);
 
@@ -58,16 +64,9 @@ const Navbar = () => {
           label="Project"
         />
       </NavLink>
-      <NavLink className="navbarItems" to="/contact">
-        <Tab
-          sx={{
-            fontFamily: "'Jost', sans-serif",
-            fontWeight: "600",
-            textTransform: "uppercase",
-            fontSize: "15px",
-          }}
-          label="Contact me"
-        />
+
+      <NavLink to="/contact">
+        <AnimationButton>Contact me</AnimationButton>
       </NavLink>
     </>
   );
@@ -102,11 +101,7 @@ const Navbar = () => {
           {/* Navbar brand */}
           <Link to="/">
             <Typography>
-              <img
-                style={{ maxWidth: "135px" }}
-                src="https://i.ibb.co/BZs0fTX/logo.png"
-                alt="Logo"
-              />
+              <img style={{ maxWidth: "135px" }} src={logo} alt="Logo" />
             </Typography>
           </Link>
 
